@@ -1,6 +1,6 @@
 Использовал
 Фронт
-	-vue(и проект вьюхой инсталировал)
+	-vue
 	-bootstrap
 	-font-awesome
 	-axios
