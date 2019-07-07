@@ -7,12 +7,7 @@ const bodyPar = require('body-parser');
 
 app.use(cors());
 app.use(bodyPar.json());
-
 app.use(bodyPar.urlencoded())
-app.get('/', (req, res) => {
-	
-})
-
 
 app.post('/json', (req, res) => {
     let user_data = req.body,
@@ -55,9 +50,10 @@ app.post('/find-city', (req, res) => {
         })
 });
 
-// app.post('/find-city', (req, res) => {
-//     let datCityName = req.body,
-// 		options = {
+// app.post('/find-city', (req, res) => { // хотел реализовать с поиском ID не вышло
+//     let datCityName = req.body,		// Транслитировать корректно выходит не все города
+// 		options = {						// в частности Москва - Moscow
+
 // 		    uri: 'http://api.openweathermap.org/data/2.5/find',
 // 		    qs: {
 // 		    	q: datCityName.cityName,

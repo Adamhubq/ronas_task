@@ -13,7 +13,7 @@
               aria-describedby="emailHelp" 
               placeholder=""
               v-model="searchSity">
-              <div class="col-2 curs_pointer" v-on:click="getListCity">
+              <div class="col-2 curs_pointer" v-on:click="getDataCity">
                 Поиск
               </div>
             </div>
@@ -46,13 +46,13 @@
         </div>
       </div>
     </div>
-    <div class="container" v-if="arrCitiResp.length">
+    <!-- <div class="container" v-if="arrCitiResp.length">
       <div  v-for="element in arrCitiResp">
         <p v-model="element.country" v-bind:key="element.id" v-on:click="getData">
           {{element.name_}}, {{element.country}}
         </p>
       </div>
-    </div>
+    </div> -->
     <div class="container">
       <div class="row">
         <div class="col-6 row justify-content-end">
@@ -162,7 +162,7 @@ export default {
     }
   },
   methods: {
-    getListCity: function () {
+    getDataCity: function () { // 
       let cityName;
       this.arrCitiResp = [];
       if (this.searchSity == 'Москва') {
@@ -235,7 +235,7 @@ export default {
     toggleshowSearcCity: function () {
       this.showSearcCity = !this.showSearcCity
     },
-    getGeolocation: function () {
+    getGeolocation: function () { // update data
       let coords = '';
       navigator.geolocation.getCurrentPosition((position) => {
         coords = {
@@ -271,6 +271,8 @@ export default {
   }
 }
 </script>
+
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
