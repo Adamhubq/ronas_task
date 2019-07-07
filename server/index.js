@@ -4,7 +4,6 @@ const app = express();
 const request_ = require('request-promise');
 const cors = require('cors');
 const bodyPar = require('body-parser');
-const array = require('./city.list.js');
 
 app.use(cors());
 app.use(bodyPar.json());
